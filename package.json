@@ -2,7 +2,7 @@
   "name": "pomodoro",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://estevanmaito.me/pomodoro",
+  "homepage": "https://Prachi2696.github.io/publicrepo",
   "dependencies": {
     "@types/jest": "26.0.9",
     "@types/node": "14.0.27",
@@ -25,7 +25,7 @@
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "prebuild": "env NODE_ENV=production postcss src/tailwind.css -o src/tailwind.output.css",
+    "prebuild": "cross-env NODE_ENV=production postcss src/tailwind.css -o src/tailwind.output.css",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
