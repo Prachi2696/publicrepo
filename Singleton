@@ -1,0 +1,59 @@
+Here’s a concise and easy-to-remember **Singleton in Java** note you can use for interview prep:
+
+---
+
+## ✅ Singleton Design Pattern in Java (Interview Notes)
+
+### 🔹 What is Singleton?
+
+* A design pattern that ensures **only one instance** of a class is created.
+* Provides a **global point of access** to that instance.
+
+---
+
+### 🔹 Why use Singleton?
+
+* To save memory by preventing unnecessary object creation.
+* Used for logging, config classes, DB connections, etc.
+
+---
+
+### 🔹 Key Concepts:
+
+* **Private constructor** to restrict instantiation.
+* **Static variable** to hold the instance.
+* **Public static method** to get the instance.
+
+---
+
+---
+
+#### 5. **Bill Pugh Singleton (Best & Simplest Thread-safe)**
+
+```java
+public class Singleton {
+    private Singleton() {}
+    private static class Holder {
+        private static final Singleton INSTANCE = new Singleton();
+    }
+    public static Singleton getInstance() {
+        return Holder.INSTANCE;
+    }
+}
+```
+
+✅ Lazy, Thread-safe, No sync needed
+✅ Recommended way
+
+---
+
+### 🔹 Real-life Examples:
+
+* Logger class
+* Configuration manager
+* Cache
+* Thread pool
+
+---
+
+
